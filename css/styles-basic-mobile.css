@@ -340,7 +340,7 @@ section {
 
 /* #endregion  */
 
-@media screen and not (hover: hover) {
+@media screen and (hover: hover) {
   .footer-page .social-link:hover,
   .footer-page .social-link:focus,
   .modal-menu .social-link:hover,

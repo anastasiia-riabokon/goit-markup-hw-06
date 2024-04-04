@@ -34,6 +34,8 @@ ul {
   padding: 0;
 }
 
+ul{list-style-type: none;}
+
 fieldset,
 input,
 textarea {
@@ -65,7 +67,6 @@ img {
 /* #endregion pattern visually-hidden */
 
 .container {
-  max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -81,6 +82,7 @@ img {
   color: var(--navy-blue);
   margin: 0 auto 72px;
 }
+
 /* #endregion Title Section */
 
 /* #region  Title Block in Section */
@@ -99,17 +101,11 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-weight: 500;
 }
 /*#endregion Main Styles for Plain Text */
 
-/* #region Main padding */
-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-/* #endregion Main padding */
-
-/* #region Header */
+/* #region Header Page */
 .header-page {
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -120,14 +116,11 @@ section {
   background-color: var(--white);
 }
 
-.header-page .container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-page .navigation-header {
+.navigation-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 72px;
 }
 
 .studio-portf-cont,
@@ -166,7 +159,14 @@ section {
   color: var(--iris);
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 76px;
+  display: block;
+}
+
+.header-btn-menu {
+  background-color: transparent;
+  border: none;
+  width: 26px;
+  height: 26px;
 }
 
 .color-dark-gray-text {
@@ -211,7 +211,8 @@ section {
   border-radius: 2px;
   background-color: var(--ocean);
 }
-/* #endregion Header */
+
+/* #endregion Header Page */
 
 /* #region Container Main Tittle and Button */
 .main-page {
@@ -240,7 +241,7 @@ section {
 .main-button {
   background-color: var(--iris);
   color: var(--white);
-  font-family: 'Roboto', sans-serif;
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -249,14 +250,13 @@ section {
   border-radius: 4px;
   border: none;
   padding: 16px 32px;
-  background: var(--iris);
-  margin: 48px auto 0;
+  margin: auto;
   display: block;
   min-width: 169px;
   height: 56px;
+  margin-top: 42px;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -268,49 +268,35 @@ section {
 /* #region Container "Offers" - NONE Tittle */
 .page-offers .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .list-offers {
   list-style-type: none;
   display: flex;
-  gap: 24px;
+  justify-content: center;
 }
 
 .item-offers {
   display: block;
-  width: calc((100% - 72px) / 4);
 }
 
-.icon-offer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.block-icon {
+  display: none;
 }
 
-.item-offers .block-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--cloud);
-  height: 112px;
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  margin-bottom: 8px;
-  position: relative;
-}
 /* #endregion Container "Offers" - NONE Tittle */
 
 /* #region Container "Our Team" */
 .main-page-team .container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-page-team {
   background-color: var(--cloud);
+  display: flex;
 }
 
 .text-container-for-page-team {
@@ -324,13 +310,12 @@ section {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   display: block;
-  width: calc((100% - 72px) / 4);
 }
 
 .list-team {
   list-style-type: none;
   display: flex;
-  gap: 24px;
+  justify-content: center;
 }
 /* #endregion Container "Our Team" */
 
@@ -379,14 +364,12 @@ section {
 .list-portfolio {
   list-style-type: none;
   display: flex;
-  column-gap: 24px;
-  row-gap: 48px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .item-portfolio {
   display: block;
-  width: calc((100% - 48px) / 3);
   cursor: pointer;
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -459,10 +442,6 @@ section {
   justify-content: space-between;
 }
 
-.container-logo-text {
-  margin-right: 120px;
-}
-
 .form-footer {
   display: flex;
   gap: 24px;
@@ -501,7 +480,7 @@ section {
   border-radius: 4px;
   border: none;
   padding: 8px 24px;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   cursor: pointer;
   display: flex;
@@ -531,21 +510,24 @@ section {
 /*#endregion Footer */
 
 /* #region Social Networks Footer */
-.list-soc-networks-footer {
+.list-soc-networks-footer,
+.list-soc-networks-menu {
   list-style-type: none;
   display: flex;
   gap: 16px;
 }
 
 .list-soc-networks-footer .social-link:hover,
-.list-soc-networks-footer .social-link:focus {
+.list-soc-networks-footer .social-link:focus,
+.list-soc-networks-menu .social-link:hover,
+.list-soc-networks-menu .social-link:focus {
   background-color: var(--green);
 }
 
-.footer-soc-networks {
+.footer-soc-networks,
+.menu-soc-networks {
   display: flex;
   flex-direction: column;
-  margin-right: 80px;
 }
 /* #endregion Social Networks Footer */
 
@@ -564,13 +546,15 @@ section {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .modal {
@@ -722,6 +706,8 @@ section {
 
 .checkbox {
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
 }
 
 .icon-agree {
@@ -735,10 +721,12 @@ section {
 
   cursor: pointer;
   border-radius: 2px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  flex-shrink: 0;
+  margin-right: 8px;
 }
 
 .input-checkbox:checked + .checkbox-text .icon-agree {
@@ -753,15 +741,19 @@ section {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate);
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
 }
 
-.checkbox-text .text-link {
+.text .text-link {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--iris);
+  display: inline-block;
 }
 
 .form-button {

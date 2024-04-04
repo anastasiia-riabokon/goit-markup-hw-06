@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
 
     <!-- #region Normalize -->
@@ -22,6 +23,7 @@
     />
     <!-- #endregion Link Font Style -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles-adapt.css" />
   </head>
 
   <body>
@@ -32,6 +34,12 @@
           <a href="./index.html" class="logo">
             Web<span class="color-dark-gray-text">Studio</span>
           </a>
+
+          <button class="header-btn-menu">
+            <svg class="icon-menu" width="26" height="26">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
 
           <ul class="studio-portf-cont">
             <li>
@@ -67,7 +75,7 @@
       <!-- #region Main Page -->
       <section class="main-page">
         <div class="container">
-          <h1 class="main-title">Effective Solutions for Your Business</h1>
+          <h1 class="main-title">Effective Solutions for&nbsp;Your Business</h1>
           <button type="button" class="main-button">Order Service</button>
         </div>
       </section>
@@ -146,6 +154,10 @@
             <!-- #region Block "Mark Guerrero"-->
             <li class="item-team">
               <img
+                srcset="
+                  ./images/img-mark.jpg                 1x,
+                  ./images/images-two-x/img-mark@2x.jpg 2x
+                "
                 src="./images/img-mark.jpg"
                 alt="Mark-Guerrero"
                 width="264"
@@ -213,7 +225,15 @@
 
             <!-- #region Block "Tom Ford"-->
             <li class="item-team">
-              <img src="./images/img-tom.jpg" alt="Tom-Ford" width="264" />
+              <img
+                srcset="
+                  ./images/img-tom.jpg                 1x,
+                  ./images/images-two-x/img-tom@2x.jpg 2x
+                "
+                src="./images/img-tom.jpg"
+                alt="Tom-Ford"
+                width="264"
+              />
               <div class="text-container-for-page-team">
                 <h3 class="sub-title">Tom Ford</h3>
                 <p class="main-text">Frontend Developer</p>
@@ -278,6 +298,10 @@
             <!-- #region Block "Camila Garcia"-->
             <li class="item-team">
               <img
+                srcset="
+                  ./images/img-camila.jpg                 1x,
+                  ./images/images-two-x/img-camila@2x.jpg 2x
+                "
                 src="./images/img-camila.jpg"
                 alt="Camila-Garcia"
                 width="264"
@@ -346,6 +370,10 @@
             <!-- #region Block "Daniel Wilson"-->
             <li class="item-team">
               <img
+                srcset="
+                  ./images/img-daniel.jpg               1x,
+                  images/images-two-x/img-daniel@2x.jpg 2x
+                "
                 src="./images/img-daniel.jpg"
                 alt="Daniel-Wilson"
                 width="264"
@@ -424,6 +452,10 @@
             <li class="item-portfolio">
               <div class="overlay-portfolio">
                 <img
+                  srcset="
+                    ./images/img-banking-app.jpg                 1x,
+                    ./images/images-two-x/img-banking-app@2x.jpg 2x
+                  "
                   src="./images/img-banking-app.jpg"
                   alt="Banking-App"
                   width="360"
@@ -445,6 +477,10 @@
             <li class="item-portfolio">
               <div class="overlay-portfolio">
                 <img
+                  srcset="
+                    ./images/img-cashless-pay.jpg                 1x,
+                    ./images/images-two-x/img-cashless-pay@2x.jpg 2x
+                  "
                   src="./images/img-cashless-pay.jpg"
                   alt="Cashless-Payment"
                   width="360"
@@ -466,6 +502,10 @@
             <li class="item-portfolio">
               <div class="overlay-portfolio">
                 <img
+                  srcset="
+                    ./images/img-meditation-app.jpg                 1x,
+                    ./images/images-two-x/img-meditation-app@2x.jpg 2x
+                  "
                   src="./images/img-meditation-app.jpg"
                   alt="Meditation-App"
                   width="360"
@@ -487,6 +527,10 @@
             <li class="item-portfolio">
               <div class="overlay-portfolio">
                 <img
+                  srcset="
+                    ./images/img-taxi-service.jpg                 1x,
+                    ./images/images-two-x/img-taxi-service@2x.jpg 2x
+                  "
                   src="./images/img-taxi-service.jpg"
                   alt="Taxi-Service"
                   width="360"
@@ -508,6 +552,10 @@
             <li class="item-portfolio">
               <div class="overlay-portfolio">
                 <img
+                  srcset="
+                    ./images/img-screen-illustrations.jpg                 1x,
+                    ./images/images-two-x/img-screen-illustrations@2x.jpg 2x
+                  "
                   src="./images/img-screen-illustrations.jpg"
                   alt="Screen-Illustrations"
                   width="360"
@@ -529,6 +577,10 @@
             <li class="item-portfolio">
               <div class="overlay-portfolio">
                 <img
+                  srcset="
+                    ./images/img-online-courses.jpg                 1x,
+                    ./images/images-two-x/img-online-courses@2x.jpg 2x
+                  "
                   src="./images/img-online-courses.jpg"
                   alt="Online-Courses"
                   width="360"
@@ -721,20 +773,25 @@
               id="user-privacy"
               value="true"
             />
+
             <label class="checkbox-text" for="user-privacy">
               <span class="icon-agree">
                 <svg class="svg-tick" width="10" height="8">
                   <use href="./images/icons.svg#icon-tick"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a
-                class="text-link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                >Privacy Policy</a
-              >
+
+              <span class="text">
+                I accept the terms and conditions of&nbsp;the
+
+                <a
+                  class="text-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Privacy Policy</a
+                >
+              </span>
             </label>
           </div>
 
@@ -745,5 +802,85 @@
       </div>
     </div>
     <!-- #endregion Modal Window -->
+
+    <!-- #region Modal Menu -->
+    <div class="modal-menu">
+      <div class="modal-menu-container">
+        <button class="modal-btn-close" type="butto">
+          <svg class="icon-modal" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="studio-portf-cont-menu">
+          <li>
+            <a href="./index.html" class="menu-link">Studio</a>
+          </li>
+          <li><a href="" class="menu-link">Portfolio</a></li>
+          <li><a href="" class="menu-link">Contacts</a></li>
+        </ul>
+
+        <address class="contacts-menu">
+          <ul class="list-contacts-menu">
+            <li>
+              <a href="mailto:info@devstudio.com" class="link-contact-menu"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+110001111111" class="link-contact-menu"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+
+        <ul class="list-soc-networks-menu">
+          <li class="icon-menu">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="social-link"
+              ><svg class="icon-soc-net" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="icon-menu">
+            <a href="http://twitter.com" target="_blank" class="social-link">
+              <svg class="icon-soc-net" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="icon-menu">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="social-link"
+            >
+              <svg class="icon-soc-net" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="icon-menu">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              class="social-link"
+            >
+              <svg class="icon-soc-net" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- #endregion Modal Menu -->
   </body>
 </html>

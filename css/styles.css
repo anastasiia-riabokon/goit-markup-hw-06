@@ -436,7 +436,6 @@ img {
 .footer-page .container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
 
 .form-footer {

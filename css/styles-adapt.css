@@ -17,6 +17,11 @@
     max-width: 320px;
   }
 
+  .studio-portf-cont,
+  .contacts {
+    display: none;
+  }
+
   .item-offers .sub-title {
     text-align: center;
   }
@@ -193,6 +198,16 @@
     max-width: 768px;
   }
 
+  .list-contacts {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .link-contacts {
+    font-size: 12px;
+  }
+
   .main-page-team .container {
     padding-right: 108px;
     padding-left: 108px;
@@ -273,13 +288,18 @@
 
 /* ==TABLET=&=DESRTOP== */
 @media (min-width: 768px) {
-  .header-btn-menu {
-    display: none;
-  }
-
   .header-page .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .studio-portf-cont-menu,
+  .contacts-menu,
+  .header-btn-menu,
+  .modal-btn-close,
+  .list-soc-networks-menu {
+    display: none;
   }
 }
 
@@ -288,10 +308,5 @@
   .item-offers .sub-title {
     font-size: 36px;
     font-weight: 700;
-  }
-
-  .studio-portf-cont,
-  .contacts {
-    display: none;
   }
 }

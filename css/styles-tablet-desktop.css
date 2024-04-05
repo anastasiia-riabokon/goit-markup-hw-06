@@ -1,10 +1,3 @@
-@media screen and (min-resolution: 192dpi) {
-  .main-page {
-    background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
-      url(../images/images-two-x/bg@2x.jpg);
-  }
-}
-
 /* #region Tablet + Desktop*/
 @media only screen and (min-width: 768px) {
   .header-btn-menu,
@@ -122,6 +115,15 @@
 
   .main-page {
     padding: 112px 0;
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+      url(../images/bg/bg-tab@1x.jpg);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .main-page {
+      background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+        url(../images/bg/bg-tab@2x.jpg);
+    }
   }
 
   .main-title {
@@ -181,6 +183,15 @@
 
   .main-page {
     padding: 188px 0;
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+      url(../images/bg/bg-desk@1x.jpg);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .main-page {
+      background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+        url(../images/bg/bg-desk@2x.jpg);
+    }
   }
   .main-title {
     font-size: 56px;

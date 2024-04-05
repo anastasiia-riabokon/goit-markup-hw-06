@@ -362,13 +362,20 @@ section {
 .main-page {
   background-color: var(--navy-blue);
   background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
-    url(../images/people-office.jpg);
+    url(../images/bg/bg-mob@1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   padding: 72px 0;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .main-page {
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+      url(../images/bg/bg-mob@2x.jpg);
+  }
 }
 
 .main-title {

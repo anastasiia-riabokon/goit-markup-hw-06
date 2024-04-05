@@ -2,7 +2,6 @@
   .main-page {
     background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
       url(../images/images-two-x/bg@2x.jpg);
-    padding: 72px 0;
   }
 }
 
